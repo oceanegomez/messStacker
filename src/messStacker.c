@@ -6,14 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
-const char* getMessStackerVersion(void) {
-     /* 
-     retourne le numéro de la version actuelle
-     */
-    return MESS_STAKER_VERSION ;
-}
-
+#define SIZE_STACK 30
 
 // ==============================================================================================================
 typedef struct {
@@ -22,6 +15,23 @@ typedef struct {
     uint8_t  size;  // entier non signé sur 8 bits
     uint8_t  checksum;  // entier non signé sur 8 bits
 } Message; 
+// ==============================================================================================================
+
+
+// Définition des constantes
+
+
+Message stackMess[SIZE_STACK];
+int lastPos = -1; // posiition du derbier message
+int curPos =  0; // position du message courant dans la file
+int messCount =  0; // nombre de messages présents dans la file
+
+
+
+// ==============================================================================================================
+const char* getMessStackerVersion(void) { // retourne le numéro de la version actuelle
+    return MESS_STAKER_VERSION ;
+}
 // ==============================================================================================================
 
 
