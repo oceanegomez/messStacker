@@ -42,8 +42,10 @@ bool sendMessage(uint8_t  cmd, char data[SIZE_MAX_DATA], uint8_t size) { // def
 
 
 // ==============================================================================================================
-bool haveMessage(void) { // def
+bool haveMessage(void) { //Return True si il existe un message dans la file
+    return (messCount > 0);
 }
+
 // ==============================================================================================================
 
 

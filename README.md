@@ -20,3 +20,7 @@ Messtackers est composé de 3 dossiers : src, build et test, ainsi que d'un fich
 
 Dépot distant :
 https://github.com/oceanegomez/messStacker.git
+
+
+Fonctions de la bibliothèque messStacker.c : 
+-> haveMessage : permets de savoir s’il existe un message dans la file. Return True si oui.
