@@ -27,3 +27,11 @@ Fonctions de la bibliothèque messStacker.c :
 -> haveMessage : permets de savoir s’il existe un message dans la file. Return True si oui.
 
 -> checksumMessage : calcule la somme de tous les octets de cmd et des size premières cases du tableau data dans une variable et la renvoie. 
+
+-> sendMessage : place le message écrit en argument dans la file. 
+
+-> curMessageCmd : fournit la valeur de cmd du message courant 
+
+-> curMessageSize : fournit la valeur de size du message courant 
+
+-> curMessageChecksum : fournit la valeur de checksum du message courant 

@@ -36,7 +36,8 @@ const char* getMessStackerVersion(void) { // retourne le numéro de la version a
 
 
 // ==============================================================================================================
-bool sendMessage(uint8_t  cmd, char data[SIZE_MAX_DATA], uint8_t size) { // def
+bool sendMessage(uint8_t cmd, char data[SIZE_MAX_DATA], uint8_t size) { // placer le message décrit en argument dans la file
+
 }
 // ==============================================================================================================
 
@@ -55,18 +56,24 @@ bool nextMessage(void) { // def
 
 
 // ==============================================================================================================
-uint8_t curMessageCmd(void) { // def
+uint8_t curMessageCmd(void) { // donne la valeur de cmd du message courant
+    if (messCount == 0) return 0;
+    return stackMess[curPos].cmd;
 }
 // ==============================================================================================================
 
 
 // ==============================================================================================================
-uint8_t curMessageSize(void) { // def
+uint8_t curMessageSize(void) { // donne la valeur de size du message courant
+    if (messCount == 0) return 0;
+    return stackMess[curPos].size;
 }
 // ==============================================================================================================
 
 // ==============================================================================================================
-uint8_t curMessageChecksum(void) { // def
+uint8_t curMessageChecksum(void) { // donne la valeur de checksum du message courant
+    if (messCount == 0) return 0;
+    return stackMess[curPos].checksum;
 }
 // ==============================================================================================================
 
