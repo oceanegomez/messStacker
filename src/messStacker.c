@@ -45,7 +45,6 @@ bool sendMessage(uint8_t  cmd, char data[SIZE_MAX_DATA], uint8_t size) { // def
 bool haveMessage(void) { //Return True si il existe un message dans la file
     return (messCount > 0);
 }
-
 // ==============================================================================================================
 
 
@@ -79,7 +78,12 @@ bool curMessageData(int lenghtMax, char buff) { // def
 
 
 // ==============================================================================================================
-uint8_t checksumMessage(uint8_t  cmd, char data[SIZE_MAX_DATA], uint8_t size) { // def
+uint8_t checksumMessage(uint8_t  cmd, char data[SIZE_MAX_DATA], uint8_t size) { // calcule la somme de tous les octets
+    int8_t checksum = cmd; // initialisation de la somme
+    for (uint8_t i = 0; i < size; i++) {
+        checksum += (uint8_t)data[i]; // ajoute les size premières cases du tableau data a notre somme
+    }
+    return checksum;
 }
 // ==============================================================================================================
 

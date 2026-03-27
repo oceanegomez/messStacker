@@ -23,4 +23,7 @@ https://github.com/oceanegomez/messStacker.git
 
 
 Fonctions de la bibliothèque messStacker.c : 
+
 -> haveMessage : permets de savoir s’il existe un message dans la file. Return True si oui.
+
+-> checksumMessage : calcule la somme de tous les octets de cmd et des size premières cases du tableau data dans une variable et la renvoie. 
