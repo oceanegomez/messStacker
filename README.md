@@ -17,3 +17,6 @@ Messtackers est composé de 3 dossiers : src, build et test, ainsi que d'un fich
 -> build : contient les fichiers exécutés de mon programme test_lib.
 -> makefile : règles pour simplifier l'utilisation de notre librairie. 
 -> .gitignore : permets d'ignorer les fichiers .o 
+
+Dépot distant :
+https://github.com/oceanegomez/messStacker.git
